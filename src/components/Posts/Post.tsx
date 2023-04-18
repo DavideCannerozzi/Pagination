@@ -1,4 +1,4 @@
-import MyPosts from "../Post.inteface";
+import MyPosts from "./Post.inteface";
 
 interface Props {
   blog: MyPosts[];
@@ -6,14 +6,13 @@ interface Props {
 
 export const Post: React.FC<Props> = ({ blog }) => {
   return (
-    <div>
+    <div className="">
+    
       {blog.map((post: MyPosts) => {
         return (
-          <div>
             <ul>
-              <li>{post.title}</li>
+              <li className="text-gray-700 font-semibold text-xl mb-2 border p-2">{post.title}</li>
             </ul>
-          </div>
         );
       })}
     </div>
